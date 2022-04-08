@@ -12,8 +12,8 @@ class Tag(models.Model):
     def __str__(self):
         return self.name
 
-    def get_absolut_url(self):
-        return f'/blog/tag/{self.slug}/'
+    def get_absolute_url(self):
+        return f'/blog/tag/{self.slug}'
 
 
 class Category(models.Model) :
