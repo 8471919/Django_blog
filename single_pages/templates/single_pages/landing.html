@@ -10,4 +10,9 @@
         <a href="/about_me">자기소개</a>
     </nav>
     <h1>대문페이지!</h1>
+    {% for post in recent_posts %}
+        <p>{{ post.title }} - {{ post.get_content_markdown | truncatewords:30 | safe }}</p>
+        <hr/>
+    {% endfor %}
+
 {% endblock %}
